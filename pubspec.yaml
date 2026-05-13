@@ -1,0 +1,70 @@
+name: monitor_bot
+description: AI-powered 24/7 web monitor bot
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Background execution ---
+  # Keeps your monitors running 24/7 even when app is closed
+  flutter_background_service: ^5.0.5
+  workmanager: ^0.5.2
+
+  # --- Web page loading & HTTP calls ---
+  # Loads websites silently, makes API calls to Claude/GPT/Gemini
+  webview_flutter: ^4.4.2
+  http: ^1.2.1
+  dio: ^5.4.3
+
+  # --- Notifications ---
+  # Fires push notifications on device when condition is met — completely free
+  flutter_local_notifications: ^17.1.2
+
+  # --- Local database ---
+  # Stores all your monitor tasks, alert history, snapshots on device
+  sqflite: ^2.3.2
+  path_provider: ^2.1.2
+
+  # --- Secure key storage ---
+  # Encrypts API keys using Android Keystore / iOS Keychain
+  # Your keys NEVER leave the device
+  flutter_secure_storage: ^9.0.0
+
+  # --- State management & navigation ---
+  # provider: manages app data/state cleanly across screens
+  # go_router: handles navigation between screens
+  # shared_preferences: stores simple settings like theme, selected provider
+  provider: ^6.1.2
+  go_router: ^13.2.0
+  shared_preferences: ^2.2.3
+
+  # --- Charts & usage dashboard ---
+  # fl_chart: draws the usage bar charts in your dashboard
+  # percent_indicator: draws the circular/linear usage progress bars
+  fl_chart: ^0.67.0
+  percent_indicator: ^4.2.3
+
+  # --- UI helpers ---
+  # google_fonts: clean typography
+  # flutter_svg: renders SVG icons/images
+  # lottie: smooth animations (loading spinners, success animations)
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10
+  lottie: ^3.1.0
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/guide_screenshots/
