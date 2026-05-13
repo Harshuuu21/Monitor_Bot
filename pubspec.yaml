@@ -7,6 +7,10 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
+
+  # Launches URLs in browser — used for API key links
+  url_launcher: ^6.2.6
+
   flutter:
     sdk: flutter
 
@@ -20,6 +24,8 @@ dependencies:
   webview_flutter: ^4.4.2
   http: ^1.2.1
   dio: ^5.4.3
+
+
 
   # --- Notifications ---
   # Fires push notifications on device when condition is met — completely free
