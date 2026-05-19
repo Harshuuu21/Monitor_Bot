@@ -1,15 +1,9 @@
-// settings_provider.dart
-// Manages app-wide settings.
-// Currently handles selected AI provider.
-// Easily extensible for theme, language, etc.
-
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 import 'package:monitor_bot/core/constants.dart';
 import 'package:monitor_bot/services/key_service.dart';
 
 class SettingsProvider extends ChangeNotifier {
   final _keyService = KeyService();
-
   AiProvider _selectedProvider = AiProvider.gemini;
   bool _loading = false;
 
@@ -19,9 +13,7 @@ class SettingsProvider extends ChangeNotifier {
   Future<void> init() async {
     _loading = true;
     notifyListeners();
-
     _selectedProvider = await _keyService.getSelectedProvider();
-
     _loading = false;
     notifyListeners();
   }

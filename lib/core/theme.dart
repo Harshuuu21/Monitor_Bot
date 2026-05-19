@@ -126,7 +126,7 @@ class AppTheme {
       ),
 
       // Card styling (the white/dark boxes throughout the app)
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: AppColors.surface,
         elevation: 0,
         shape: RoundedRectangleBorder(
